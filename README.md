@@ -1,7 +1,9 @@
 # Programming_Assignments_of_Deep_Learning_Specialization
 Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
-### 1 Neural Networks and Deep Learning 1.1 Python Basics with numpy (optional) 
+### 1 Neural Networks and Deep Learning 
+
+#### 1.1 Python Basics with numpy (optional) 
 
 1.1.1 About iPython Notebooks
 
@@ -21,7 +23,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 1.1.3.1 Implement the L1 and L2 loss functions  
 
-1.2 Logistic Regression with a Neural Network mindset  
+#### 1.2 Logistic Regression with a Neural Network mindset  
 
 1.2.1 Packages 
 
@@ -47,7 +49,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 1.2.8 Code of Logistic Regression with a Neural Network  
 
-1.3 Planar data classification with a hidden layer      
+#### 1.3 Planar data classification with a hidden layer      
 
 1.3.1 Packages            
 
@@ -69,7 +71,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 1.3.5 Code of Neural Network With a Hidden Layer     
 
-1.4 Building your Deep Neural Network: Step by Step  
+#### 1.4 Building your Deep Neural Network: Step by Step  
 
 1.4.1 Packages    
 
@@ -93,7 +95,6 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 1.4.6 Backward propagation module 
 
-
 1.4.6.1 Linear backward    
 
 1.4.6.2 Linear-Activation backward   
@@ -106,7 +107,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 1.4.7 Code of Deep Neural Network  
 
-1.5 Deep Neural Network for Image Classification: Application 
+#### 1.5 Deep Neural Network for Image Classification: Application 
 
 1.5.1 Packages     
 
@@ -132,7 +133,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 ### 2 Improving Deep Neural Networks: Hyperparameter tuning, Regularizationand Optimization
 
-2.1 Practical aspects of Deep Learning
+#### 2.1 Practical aspects of Deep Learning
 
 2.1.1 Initialization     
 
@@ -168,7 +169,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 2.1.3.3 N-dimensional gradient checking 
 
-2.2 Optimization       
+#### 2.2 Optimization       
 
 2.2.1 Packages          
 
@@ -190,7 +191,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 2.2.6.4 Summary         
 
-2.3 Tensorflow         
+#### 2.3 Tensorflow         
 
 2.3.1 Exploring the Tensorflow Library
 
@@ -224,9 +225,9 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 2.3.2.9 Summary         
 
-3 Convolutional Neural Networks 
+### 3 Convolutional Neural Networks 
 
-### 3.1 Convolutional Neural Networks: Step by Step    
+#### 3.1 Convolutional Neural Networks: Step by Step    
 
 3.1.1 Packages         
 
@@ -250,7 +251,7 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 3.1.5.2 Pooling layer - backward pass     
 
-3.2 Convolutional Neural Networks: Application  
+#### 3.2 Convolutional Neural Networks: Application  
 
 3.2.1 TensorFlow model   
 
@@ -263,48 +264,93 @@ Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 3.2.5 Compute cost  
 
 3.2.6 Model    
-3.3 Keras Tutorial - The Happy House (not graded)   
+
+#### 3.3 Keras Tutorial - The Happy House (not graded)   
+
 3.3.1 The Happy House 
+
 3.3.2 Building a model in Keras   
+
 3.3.3 Conclusion  
+
 3.3.4 Test with your own image (Optional)    
+
 3.3.5 Other useful functions in Keras (Optional)
-3.4 Residual Networks 
+
+#### 3.4 Residual Networks 
+
 3.4.1 The problem of very deep neural networks 
+
 3.4.2 Building a Residual Network 
+
 3.4.2.1 The identity block 
+
 3.4.2.2 The convolutional block  
+
 3.4.3 Building your first ResNet model (50 layers) 
+
 3.4.4 Test on your own image (Optional/Ungraded) 
-3.5 Car detection with YOLOv2 
+
+#### 3.5 Car detection with YOLOv2 
+
 3.5.1 Problem Statement  
+
 3.5.2 YOLO   
+
 3.5.2.1 Model details 
-3.5.2.2 Filtering with a threshold on class scores  
+
+3.5.2.2 Filtering with a threshold on class scores 
+
 3.5.2.3 Non-max suppression 
+
 3.5.2.4 Wrapping up the filtering
+
 3.5.3 Test YOLO pretrained model on images
+
 3.5.3.1 Defining classes, anchors and image shape
+
 3.5.3.2 Loading a pretrained model
+
 3.5.3.3 Convert output of the model to usable bounding box tensors
+
 3.5.3.4 Filtering boxes 
+
 3.5.3.5 Run the graph on an image    
-3.6 Face Recognition for the Happy House   
+
+#### 3.6 Face Recognition for the Happy House   
+
 3.6.1 Naive Face Verification  
+
 3.6.2 Encoding face images into a 128-dimensional vector 
+
 3.6.2.1 Using an ConvNet to compute encodings 
+
 3.6.2.2 The Triplet Loss  
-3.6.3 Loading the trained model      
-3.6.4 Applying the model         
-3.6.4.1 Face Verification     
+
+3.6.3 Loading the trained model  
+
+3.6.4 Applying the model     
+
+3.6.4.1 Face Verification   
+
 3.6.4.2 Face Recognition     
-3.7 Art generation with Neural Style Transfer    
+
+#### 3.7 Art generation with Neural Style Transfer   
+
 3.7.1 Problem Statement   
+
 3.7.2 Transfer Learning    
-3.7.3 Neural Style Transfer        
+
+3.7.3 Neural Style Transfer    
+
 3.7.3.1 Computing the content cost   
+
 3.7.3.2 Computing the style cost
+
 3.7.3.3 Defining the total cost to optimize 
+
 3.7.4 Solving the optimization problem  
+
 3.7.5 Test with your own image (Optional/Ungraded) 
+
 3.7.6 Conclusion 
