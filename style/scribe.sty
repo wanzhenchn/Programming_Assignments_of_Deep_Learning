@@ -1,0 +1,175 @@
+\usepackage[margin=1.2in]{geometry}
+%\usepackage{CTEX} %中文宏包
+%\CTEXoptions[today=old] %使日期显示为英文格式
+
+\usepackage{fontspec} %设置英文字体
+\setmainfont{Palatino Linotype} %fontspec宏包下设置全局默认英文字体
+%\newcommand{\Centaur}{\fontspec{Centaur}} %单独设置某一字体
+
+\usepackage{xeCJK} %设置中文字体
+\setCJKmainfont{STKaiti} %xeCJK宏包下设置全局默认中文字体，默认为宋体SimSun
+
+\usepackage{amsmath,amsthm,verbatim,amssymb,amsfonts,amscd, graphicx}
+\usepackage{algorithm,algpseudocode} % 算法
+\renewcommand{\thealgorithm}{\thesubsection.\arabic{algorithm}} % 算法按章节编号
+
+\usepackage{titlesec}
+\setcounter{secnumdepth}{4} % how many sectioning levels to assign numbers to
+\setcounter{tocdepth}{4}    % how many sectioning levels to show in ToC
+\titleformat{\paragraph}
+{\normalfont\normalsize\bfseries}{\theparagraph}{1em}{}
+\titlespacing*{\paragraph}
+{0pt}{3.25ex plus 1ex minus .2ex}{1.5ex plus .2ex}
+\newcommand{\subsubsubsection}{\paragraph}  %define newcommand \subsubsubsection
+
+\usepackage{fancyhdr} %页眉页脚设置
+\pagestyle{fancy}
+\fancyfoot{}
+\fancyhead[LE,RO]{\thepage}
+\renewcommand{\headrulewidth}{0pt}
+
+\usepackage{booktabs}
+\usepackage{multirow}
+\usepackage{longtable}
+\usepackage{colortbl} %加载表格颜色宏包
+\RequirePackage[hyperfootnotes=true]{hyperref}
+\RequirePackage{listings}
+\RequirePackage{xcolor}
+
+\usepackage{tikz}
+\usepackage[most]{tcolorbox}
+\tcbset{colback=white,colframe=blue,breakable=true}
+\tcbuselibrary{skins,breakable,minted}
+\usepackage{minted} %代码高亮语法
+%此宏包需要开启 shell-escape，Texlive 2017(2016)的具体操作是：
+%Edit(编辑)-Options(首选项)-排版-处理工具选择XeLaTeX，点击编辑
+%名称：XeLaTeX建议修改为XeLaTeX+shellescape
+%参数框：新建--shell-escape
+%点击右侧绿色箭头将其移动到$fullname之前，最后点击Ok即可。
+
+\renewcommand{\theFancyVerbLine}{\sffamily %自定义minted的linenos行号
+\textcolor[rgb]{0,0,0}{\scriptsize
+\oldstylenums{\arabic{FancyVerbLine}}}}
+
+\setminted{mathescape,breaklines,frame= leftline,       %minted基本环境统一设定
+          framerule=2pt,rulecolor=\color{blue},              
+          bgcolor=white,style=emacs
+          }
+
+
+% Python代码环境
+\newtcblisting{mypython}{listing engine=minted,
+                         minted language=Python,colback=white,
+                         minted options={fontsize=\small,mathescape,
+                                    frame= none,breaklines,linenos=false,numbersep=3mm},
+                         colframe=blue,listing only,left=5mm,enhanced,
+%overlay={\begin{tcbclipinterior}\fill[blue] (frame.south west)
+%rectangle ([xshift=5mm]frame.north west);\end{tcbclipinterior}}
+}
+
+
+\hypersetup{%
+   pdftitle = {Programming Assignments of Deep Learning Specialization (5 courses)},
+	pdfauthor = {Wan Zhen},
+	linktoc=all,
+	bookmarksnumbered=true,
+	bookmarksopen=true,
+	bookmarksopenlevel=3,
+	breaklinks=true,
+	colorlinks=true,
+	allcolors=blue,
+	urlcolor=magenta,
+	plainpages=false,
+	pdfborder=0 0 0}
+
+
+\newtheoremstyle{myplain}      {10pt}{10pt}{\itshape}{}{\scshape}{.}{.5em}{}
+\newtheoremstyle{mydefinition} {10pt}{10pt}{}{}{\scshape}{.}{.5em}{}
+\newtheoremstyle{myremark}     {10pt}{10pt}{}{}{\scshape}{.}{.5em}{}
+
+\renewcommand{\qedsymbol}{\leavevmode
+  \hbox to.77778em{%
+  \hfil\vrule
+  \vbox to.875em{\hrule width.35em\vfil\hrule}%
+  \vrule\hfil}}
+
+%\newcounter{lecture}
+\theoremstyle{myplain}
+\newtheorem{theorem}{Theorem}[section]
+\newtheorem{lemma}         [theorem]{Lemma}
+\newtheorem{proposition}   [theorem]{Proposition}
+\newtheorem{corollary}     [theorem]{Corollary}
+\newtheorem{claim}         [theorem]{Claim}
+\newtheorem{fact}          [theorem]{Fact}
+
+\theoremstyle{mydefinition}
+\newtheorem{definition}    [theorem]{Definition}
+\newtheorem{example}       [theorem]{Example}
+\newtheorem{assumption}    [theorem]{Assumption}
+\newtheorem{openproblem}   [theorem]{Open Problem}
+\newtheorem{problem}       [theorem]{Problem}
+
+\theoremstyle{myremark}
+\newtheorem{remark}        [theorem]{Remark}
+\newtheorem{conjecture}    [theorem]{Conjecture}
+
+\numberwithin{equation}{subsection}
+%\renewcommand{\fnum@figure}{\textsc{figure~\thefigure}}
+%\renewcommand{\fnum@table}{\textsc{Table~\thetable}}
+\numberwithin{figure}{subsection}
+\numberwithin{table}{subsection}                                                  % 图表按照章节编号
+\renewcommand{\thefigure}{\thesubsection.\arabic{figure}}                         %这2行 图表按制定形式编号 如1-1，将“-”改成“.” 图表编号变成 1.1
+\renewcommand{\thetable}{\thesubsection.\arabic{table}}
+\usepackage{caption}                                                          %这3行去掉图名表名的冒号
+\captionsetup[table]{labelsep=space}                                          %这3行去掉图名表名的冒号，注意如果“图1.1”到“复数的几何表示（即具体的图名）”之间的距离比较小，可以把labelsep改成quad；如果要小的间距，设置为space
+\captionsetup[figure]{labelsep=space}                                         %这3行去掉图名表名的冒号
+\captionsetup{hypcap=true}                                                    % 图片引用直接定位到图表，而不是标题位置，解决图表本身会被挡住问题
+%\usepackage[all]{hypcap} 
+
+\renewcommand{\thesection}{\arabic{section}} %\thelecture.\arabic{section}
+\renewcommand{\thepage}{\arabic{page}}
+
+
+\newcommand{\makeheader}[4]{
+%\setcounter{lecture}{#3}
+\noindent
+\parbox{7.5cm}{
+	\href{https://www.deeplearning.ai/}{deeplearning.ai} \\
+	\href{https://www.coursera.org/specializations/deep-learning}{Deep Learning Specialization (5 courses)}\\
+	\rule{0mm}{6mm}%
+	{\it Instructor:} \href{http://www.andrewng.org/}{Andrew Ng}\\
+	{\it Scribe:}	#1\\
+	{\it Date:}     #2
+}
+\hfill
+\begin{tabular}{c@{}}
+{\bf\large Programming Assignments}\\
+\href{https://www.coursera.org/learn/neural-networks-deep-learning}{COURSE 1 Neural Networks and Deep Learning}\\
+\href{https://www.coursera.org/learn/deep-neural-network}{COURSE 2 Improving Deep Neural Networks}\\
+\href{https://www.coursera.org/learn/machine-learning-projects}{COURSE 3 Structuring Machine Learning Projects}\\
+\href{https://www.coursera.org/learn/convolutional-neural-networks}{COURSE 4 Convolutional Neural Networks}\\
+\href{https://www.coursera.org/learn/nlp-sequence-models}{COURSE 5 Sequence Models}\\
+%\rule{0mm}{17mm}\scalebox{3.6}{\bf \text{Week 2-}\thelecture}
+\end{tabular}
+
+\vspace{2.5cm}
+\begin{figure}[h]
+\begin{center}
+\includegraphics[width=0.45\textwidth]{logo} %Logo
+\end{center}
+\caption*{}
+\end{figure}
+
+\begin{center}
+{ \LARGE \bf  #4}
+\vspace{1cm}\\
+{ \Large 万\ 震 (Wan Zhen)\\
+\vspace{0.3cm}
+\href{mailto:wanzhen@cqu.edu.cn}{wanzhen@cqu.edu.cn}
+}
+\end{center}
+
+\thispagestyle{empty}
+\clearpage
+}
+
