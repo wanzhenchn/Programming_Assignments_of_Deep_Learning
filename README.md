@@ -1,6 +1,15 @@
 # Programming_Assignments_of_Deep_Learning_Specialization
 Answer of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
+## Statement
+
+The main reason of organizing PDF version of Programming Assignments Keys based the Course [Deep Learning Specialization-Andrew Ng](https://www.deeplearning.ai/) is that it is easy to learn the deep learning technicals.
+
+This document can be freely used for learning and scientific research and is freely disseminated, but it must not be used for commercial purposes. Otherwise, the contributor is not responsible for the consequences.
+
+Thanks for the great work done by [Andrew Ng](http://www.andrewng.org/) and his team.
+
+
 ## Contents of Programming Assignments
 
 ### 1 Neural Networks and Deep Learning 
