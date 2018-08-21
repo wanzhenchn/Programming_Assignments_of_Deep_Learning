@@ -1,5 +1,5 @@
 # Programming_Assignments_of_Deep_Learning_Specialization
-Key of Course Deep Learning Specialization-Andrew Ng Programming Assignments
+Keys of Course Deep Learning Specialization-Andrew Ng Programming Assignments
 
 ## Statement
 
